@@ -6,13 +6,10 @@ select
     ,sum((quantity * purchase_price)) as purchase_cost
     ,sum((revenue - (quantity * purchase_price))) as margin
 from
-    {{ref('stg_raw__sales')}}
-    join 
-        {{ref('stg_raw__product')}}
-        using (products_id)
+    {{ref('int_sales_margin')}}
 group by 
-    orders_id,
-    date_date
+    orders_id
+    ,date_date
 order by
-    date_date desc,
-    orders_id desc
+    date_date desc
+    ,orders_id desc
