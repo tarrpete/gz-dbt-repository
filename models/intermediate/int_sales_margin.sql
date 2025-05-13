@@ -1,6 +1,5 @@
 select
     date_date
-    ,orders_id
     ,products_id
     ,revenue
     ,quantity
