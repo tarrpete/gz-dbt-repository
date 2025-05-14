@@ -1,7 +1,8 @@
 select
     orders_id
     ,date_date
-    ,sum(margin)
+    ,sum(revenue) as revenue
+    ,sum(margin) as margin
     ,round(sum(margin + shipping_fee - logcost - ship_cost),2) as operational_margin
     ,sum(quantity) as quantity
 from
