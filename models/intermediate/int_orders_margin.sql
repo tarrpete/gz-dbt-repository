@@ -3,8 +3,8 @@ select
     ,date_date
     ,sum(revenue) as revenue
     ,sum(quantity) as quantity
-    ,sum((quantity * purchase_price)) as purchase_cost
-    ,sum((revenue - (quantity * purchase_price))) as margin
+    ,sum(purchase_cost) as purchase_cost
+    ,sum(margin) as margin
 from
     {{ref('int_sales_margin')}}
 group by 

@@ -8,7 +8,7 @@ select
 
 from
     {{ref('int_orders_operational')}} 
-    
+
 group by 
     date_date
 order by
