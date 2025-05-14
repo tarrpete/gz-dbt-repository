@@ -48,6 +48,91 @@ sources:
             description: the cost of logistics (storage, handling, etc)
           - name: ship_cost
             description: the cost the carrier charges us to deliver an order to a customer
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords campaign details of Greenweez / we have one row per campaign_key
+        columns:
+          - name: date_date
+            description: date campaign was run
+          - name: paid_source
+            description: orginating channel leads came from
+          - name: campaign_key
+            description: unique identifier of a campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of a campaign
+          - name: impression
+            description: number of impressions
+          - name: click
+            description: number of clicks
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: adwords campaign details of Greenweez / we have one row per campaign_key
+        columns:
+          - name: date_date
+            description: date campaign was run
+          - name: paid_source
+            description: orginating channel leads came from
+          - name: campaign_key
+            description: unique identifier of a campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of a campaign
+          - name: impression
+            description: number of impressions
+          - name: click
+            description: number of clicks
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo campaign details of Greenweez / we have one row per campaign_key
+        columns:
+          - name: date_date
+            description: date campaign was run
+          - name: paid_source
+            description: orginating channel leads came from
+          - name: campaign_key
+            description: unique identifier of a campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of a campaign
+          - name: impression
+            description: number of impressions
+          - name: click
+            description: number of clicks
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: criteo campaign details of Greenweez / we have one row per campaign_key
+        columns:
+          - name: date_date
+            description: date campaign was run
+          - name: paid_source
+            description: orginating channel leads came from
+          - name: campaign_key
+            description: unique identifier of a campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of a campaign
+          - name: impression
+            description: number of impressions
+          - name: click
+            description: number of clicks
+
 models:
   # Staging #
   # ...snip...
